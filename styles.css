@@ -1,0 +1,122 @@
+/*
+
+CMS criada por: Rashid
+Mantenha os créditos.
+
+*/
+
+/* Resetando CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, , output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, , section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Iniciando codificação da CMS */
+
+body{
+	background: url('background.png') repeat;
+}
+
+.header{
+	width: 1000px;
+	height: 1060px;
+	background: url('bg.png') center;
+	margin-top: -10px;
+}
+
+.jogo{
+	margin-top: -762px;
+	float: left;
+	margin-left: 217px;
+}
+
+.noticias {
+	margin-top: -778px;
+	position:absolute;
+	margin-left: 287px;
+	font-size: 12px;
+	font-family: Verdana;
+	color: #0099cc;
+	text-shadow: 0 0 3px #333;
+}
+
+.menu{
+	float: left;
+	width:901px;
+	height:40px;
+	background:#005D7D;
+	margin-top: -834px;
+	margin-left: 228px;
+	border-bottom: 1px solid #003040;
+}
+
+.menu ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.menu ul li{
+	display:inline;
+	margin:0;
+}
+
+.menu ul li a{
+	height:27px;
+	display:block;
+	padding:13px 15px 0 15px;
+	float:left;
+	font-size:15px;
+	color:#0099cc;
+	text-decoration:none;
+	font-family: Verdana;
+	text-shadow: 0 0 3px #333;
+}
+
+.menu ul li a:hover{
+	color:#99e6ff;
+	background:#004C66;
+	-webkit-transition:all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}

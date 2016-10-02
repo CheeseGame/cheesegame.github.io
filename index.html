@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="pt_BR">
+<head>
+  <meta charset="utf-8">
+
+  <title>CheeseGame ! &raquo;</title>
+  <meta name="description" content="CheeseGame ! &raquo;">
+  <meta name="author" content="Rashid">
+	<link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+<center><div class="header"></center>
+
+<div class="jogo">
+<script type="text/javascript">
+	var langue = igator.language;
+        if (!langue) {
+                langue = igator.browserLanguage;
+        }
+        langue = langue.substr(0, 2);
+	
+	function positionMolette(X, Y) {
+	}
+	function activerMolette(OUI, HAUT) {
+	}
+	function recupLangue() {
+		return langue;
+	}
+	function pleinEcran(OUI) {
+		if (OUI) {
+			document.getElementById("transformice").style.position="fixed";
+			document.getElementById("transformice").style.left="0";
+			document.getElementById("transformice").style.top="0";
+			document.getElementById("transformice").style.width="100%";
+			document.getElementById("transformice").style.height="100%";
+			
+			document.getElementById("WidgetTwitter").style.display="none";
+			document.getElementById("idPub").style.display="none";
+			document.getElementById("pubVerticale").style.display="none";
+		} else {
+			document.getElementById("transformice").style.position="static";
+			document.getElementById("transformice").style.width="800px";
+                        document.getElementById("transformice").style.height="600px";
+		
+			document.getElementById("WidgetTwitter").style.display="inline";	
+			document.getElementById("idPub").style.display="inline";
+			document.getElementById("pubVerticale").style.display="inline";
+		}
+	}
+	function cancelEvent(e) {
+		if (igator.userAgent.indexOf("hrome") != -1) {
+			document.getElementById("swf2").x_moletteTransformice(e.wheelDelta);
+		}
+		e = e ? e : window.event;
+		if(e.stopPropagation)
+			e.stopPropagation();
+		if(e.preventDefault)
+			e.preventDefault();
+		e.cancelBubble = true;
+		e.cancel = true;
+		e.returnValue = false;
+		return false;
+        }
+        function hookEvent(element, eventName, callback) {
+		if (element.addEventListener) {
+                        if (eventName == 'mousewheel') {
+				element.addEventListener('DOMMouseScroll', callback, false);
+			}
+			element.addEventListener(eventName, callback, false);
+                } else if (element.attachEvent) {
+			element.attachEvent("on" + eventName, callback);
+        	}
+	}
+
+</script>
+
+<div class="jeu" style="z-index: 1000; width:800px;height:600px;">
+	<div id="transformice" style="z-index: 1001; width:100%;height:100%;">
+		<object id="swf1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="100%" height="100%" id="Transformice" align="middle">
+		<param name="allowScriptAccess" value="always" />
+		<param name="movie" value="http://transformice.com/TransformiceChargeur.swf" />
+		<param name="menu" value="true" />
+		<param name="quality" value="high" />
+		<param name="bgcolor" value="#6A7495" />
+		<embed id="swf2" src="http://transformice.com/TransformiceChargeur.swf" wmode="direct" menu="true" quality="high" bgcolor="#6A7495" width="100%" height="100%" name="Transformice" align="middle" swLiveConnect="true" allowFullScreen="true" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		
+		</object>
+	</div>
+</div>
+</div><!-- Jogo -->
+
+<div class='noticias'>
+	<marquee behavior='scroll' direction='left' id='scroller' onmouseout='scroller.start()' onmouseover='scroller.stop()' scrollamount='5' scrolldelay='4' width='723'>
+		Seja bem vindo ao <b style="color: #99e6ff;">CheeseGame</b>, estamos na versão <b style="color: #99e6ff;">1.131</b>.
+	</marquee>
+</div><!-- Notícias -->
+
+<div class="menu">
+	<ul>
+	<li><a href="http://themestfm.url.ph">Home</a></li>
+	<li class="page_item page-item-2"><a href="http://themestfm.url.ph/equipe/">Equipe</a></li>
+	</ul>
+</div><!-- Menu -->
+</div><!-- Header -->
+</body>
+</html>
